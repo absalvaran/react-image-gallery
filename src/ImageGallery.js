@@ -13,7 +13,7 @@ import RightNav from "src/controls/RightNav";
 import PlayPause from "src/controls/PlayPause";
 import SwipeWrapper from "src/SwipeWrapper";
 import ZoomButtons from "./controls/ZoomButtons";
-import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
+import { TransformWrapper } from "react-zoom-pan-pinch";
 
 const screenChangeEvents = [
   "fullscreenchange",
@@ -1321,23 +1321,21 @@ class ImageGallery extends React.Component {
                   />
                 )}
 
-                <TransformComponent>
-                  <Item
-                    description={item.description}
-                    fullscreen={item.fullscreen}
-                    handleImageLoaded={this.handleImageLoaded}
-                    isFullscreen={isFullscreen}
-                    onImageError={handleImageError}
-                    original={item.original}
-                    originalAlt={item.originalAlt}
-                    originalHeight={item.originalHeight}
-                    originalWidth={item.originalWidth}
-                    originalTitle={item.originalTitle}
-                    sizes={item.sizes}
-                    loading={item.loading}
-                    srcSet={item.srcSet}
-                  />
-                </TransformComponent>
+                <Item
+                  description={item.description}
+                  fullscreen={item.fullscreen}
+                  handleImageLoaded={this.handleImageLoaded}
+                  isFullscreen={isFullscreen}
+                  onImageError={handleImageError}
+                  original={item.original}
+                  originalAlt={item.originalAlt}
+                  originalHeight={item.originalHeight}
+                  originalWidth={item.originalWidth}
+                  originalTitle={item.originalTitle}
+                  sizes={item.sizes}
+                  loading={item.loading}
+                  srcSet={item.srcSet}
+                />
               </>
             )}
           </TransformWrapper>

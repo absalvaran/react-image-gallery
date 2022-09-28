@@ -454,10 +454,11 @@ $ig-shadow: 0 2px 2px lighten($ig-black, 10%);
 .zoom-container {
   position: absolute;
   width: 95vw;
-  top: 1%;
+  top: 16px;
+  left: 16px;
   display: flex;
   justify-content: space-between;
-  width: 100vw;
+  width: 98vw;
   color: black;
   z-index: 4;
 }
@@ -508,6 +509,18 @@ $ig-shadow: 0 2px 2px lighten($ig-black, 10%);
   scale: 75%;
 }
 
-.react-transform-component.react-transform-component {
-  margin: auto;
+.react-transform-component {
+  width: unset !important;
+  height: unset !important;
+}
+
+.react-transform-element {
+  width: unset !important;
+  height: unset !important;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
 }

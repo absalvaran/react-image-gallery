@@ -1,5 +1,6 @@
 import React from "react";
 import { bool, func, string } from "prop-types";
+import { TransformComponent } from "react-zoom-pan-pinch";
 
 const Item = React.memo(
   ({
@@ -21,19 +22,21 @@ const Item = React.memo(
 
     return (
       <React.Fragment>
-        <img
-          className="image-gallery-image"
-          src={itemSrc}
-          alt={originalAlt}
-          srcSet={srcSet}
-          height={originalHeight}
-          width={originalWidth}
-          sizes={sizes}
-          title={originalTitle}
-          onLoad={(event) => handleImageLoaded(event, original)}
-          onError={onImageError}
-          loading={loading}
-        />
+        <TransformComponent>
+          <img
+            className="image-gallery-image"
+            src={itemSrc}
+            alt={originalAlt}
+            srcSet={srcSet}
+            height={originalHeight}
+            width={originalWidth}
+            sizes={sizes}
+            title={originalTitle}
+            onLoad={(event) => handleImageLoaded(event, original)}
+            onError={onImageError}
+            loading={loading}
+          />
+        </TransformComponent>
         {description && (
           <span className="image-gallery-description">{description}</span>
         )}
