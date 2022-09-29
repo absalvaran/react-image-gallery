@@ -38,8 +38,8 @@ class App extends React.Component {
         renderItem: this._renderVideo.bind(this),
       },
       {
-        original: `${PREFIX_URL}1.jpg`,
-        thumbnail: `${PREFIX_URL}1t.jpg`,
+        original: `https://lh3.googleusercontent.com/nxlgf7yPI7wczQUBZJU10AmyDZr8NTQDKBuPpRpwaUZ2iADoOconilA0IQ1YzgRdbJQx5PbPJXTM6UzybaT1DnJBLuTSWy01Aw=s1000`,
+        thumbnail: `https://lh3.googleusercontent.com/nxlgf7yPI7wczQUBZJU10AmyDZr8NTQDKBuPpRpwaUZ2iADoOconilA0IQ1YzgRdbJQx5PbPJXTM6UzybaT1DnJBLuTSWy01Aw=s1000`,
         originalClass: "featured-slide",
         thumbnailClass: "featured-thumb",
         description: "Custom class for slides & thumbnails",
