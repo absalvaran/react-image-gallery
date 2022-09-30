@@ -51,6 +51,7 @@ class ImageGallery extends React.Component {
       isFullscreen: false,
       isSwipingThumbnail: false,
       isPlaying: false,
+      disablePanning: false,
     };
     this.loadedImages = {};
     this.imageGallery = React.createRef();
@@ -1299,21 +1300,30 @@ class ImageGallery extends React.Component {
     }
   }
 
+  onZoom = (ref) => {
+    if (ref?.state.scale > 1) this.setState({ disablePanning: false });
+    else this.setState({ disablePanning: true });
+  };
+
   renderItem(item) {
-    const { isFullscreen, disabled } = this.state;
+    const { isFullscreen, disablePanning } = this.state;
     const { onImageError, showZoomButtons } = this.props;
     const handleImageError = onImageError || this.handleImageError;
-
     return (
       <>
         {isFullscreen ? (
-          <TransformWrapper initialScale={1}>
+          <TransformWrapper
+            initialScale={1}
+            ref={this.onZoom}
+            panning={{
+              disabled: disablePanning,
+            }}
+          >
             {({ zoomIn, zoomOut, resetTransform }) => (
               <>
                 {showZoomButtons && isFullscreen && (
                   <ZoomButtons
                     isFullscreen
-                    disabled={disabled}
                     onClickClose={() => this.toggleFullScreen()}
                     onClickZoomIn={() => zoomIn()}
                     onClickZoomOut={() => zoomOut()}

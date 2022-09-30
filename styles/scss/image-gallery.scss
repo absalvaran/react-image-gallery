@@ -356,9 +356,7 @@ $ig-shadow: 0 2px 2px lighten($ig-black, 10%);
 
   .image-gallery-thumbnails-container {
     cursor: pointer;
-    text-align: center;
     white-space: nowrap;
-    display: flex;
   }
 }
 
@@ -458,14 +456,13 @@ $ig-shadow: 0 2px 2px lighten($ig-black, 10%);
   left: 16px;
   display: flex;
   justify-content: space-between;
-  width: 98vw;
   color: black;
   z-index: 4;
 }
 
 .zoom-controls {
   display: flex;
-  gap: 16px;
+  gap: 12px;
 }
 
 .zoom-button {

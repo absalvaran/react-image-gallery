@@ -40,7 +40,7 @@ class App extends React.Component {
       {
         original: `https://lh3.googleusercontent.com/nxlgf7yPI7wczQUBZJU10AmyDZr8NTQDKBuPpRpwaUZ2iADoOconilA0IQ1YzgRdbJQx5PbPJXTM6UzybaT1DnJBLuTSWy01Aw=s1000`,
         thumbnail: `https://lh3.googleusercontent.com/nxlgf7yPI7wczQUBZJU10AmyDZr8NTQDKBuPpRpwaUZ2iADoOconilA0IQ1YzgRdbJQx5PbPJXTM6UzybaT1DnJBLuTSWy01Aw=s1000`,
-        originalClass: "featured-slide",
+        originalClass: "original",
         thumbnailClass: "featured-thumb",
         description: "Custom class for slides & thumbnails",
       },
@@ -93,7 +93,7 @@ class App extends React.Component {
 
   _getStaticImages() {
     let images = [];
-    for (let i = 2; i < 5; i++) {
+    for (let i = 2; i < 15; i++) {
       images.push({
         original: `static/${i}.jpg`,
         thumbnail: `static/${i}t.jpg`,

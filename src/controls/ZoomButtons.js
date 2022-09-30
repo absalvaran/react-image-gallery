@@ -5,7 +5,6 @@ import SVG from "src/SVG";
 const ZoomButtons = React.memo(
   ({
     isFullscreen,
-    disabled,
     onClickClose,
     onClickZoomIn,
     onClickZoomOut,
@@ -18,31 +17,18 @@ const ZoomButtons = React.memo(
             <button
               type="button"
               className="zoom-button"
-              disabled={disabled}
               onClick={onClickClose}
             >
               <SVG icon="close" viewBox="0 0 20 20" />
             </button>
             <div className="zoom-controls">
-              <button
-                disabled={disabled}
-                className="zoom-button"
-                onClick={onClickZoomIn}
-              >
+              <button className="zoom-button" onClick={onClickZoomIn}>
                 <SVG icon="zoomIn" viewBox="0 0 25 25" />
               </button>
-              <button
-                disabled={disabled}
-                className="zoom-button"
-                onClick={onClickZoomOut}
-              >
+              <button className="zoom-button" onClick={onClickZoomOut}>
                 <SVG icon="zoomOut" viewBox="0 0 25 25" />
               </button>
-              <button
-                disabled={disabled}
-                className="zoom-button reset-icon"
-                onClick={onClickReset}
-              >
+              <button className="zoom-button reset-icon" onClick={onClickReset}>
                 <SVG icon="reset" viewBox="0 0 16 16" />
               </button>
             </div>
@@ -57,7 +43,6 @@ ZoomButtons.displayName = "ZoomButtons";
 
 ZoomButtons.propTypes = {
   isFullscreen: bool.isRequired,
-  disabled: bool.isRequired,
   onClickClose: func.isRequired,
   onClickZoomIn: func.isRequired,
   onClickZoomOut: func.isRequired,
