@@ -38,7 +38,7 @@ class App extends React.Component {
         renderItem: this._renderVideo.bind(this),
       },
       {
-        original: `https://lh3.googleusercontent.com/nxlgf7yPI7wczQUBZJU10AmyDZr8NTQDKBuPpRpwaUZ2iADoOconilA0IQ1YzgRdbJQx5PbPJXTM6UzybaT1DnJBLuTSWy01Aw=s1000`,
+        original: `https://assets.nbatopshot.com/editions/5_the_anthology_magic_johnson_anthology/14b537fd-991f-4444-b878-5dd224999b85/play_14b537fd-991f-4444-b878-5dd224999b85_5_the_anthology_magic_johnson_anthology_capture_Hero_2400_1200_Texture.jpg`,
         thumbnail: `https://lh3.googleusercontent.com/nxlgf7yPI7wczQUBZJU10AmyDZr8NTQDKBuPpRpwaUZ2iADoOconilA0IQ1YzgRdbJQx5PbPJXTM6UzybaT1DnJBLuTSWy01Aw=s1000`,
         originalClass: "original",
         thumbnailClass: "featured-thumb",
